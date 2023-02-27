@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="900" height="600"
+style="border:1px solid #000000;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+
+
+//background
+ctx.fillStyle = "#00BFFF";
+ctx.fillRect(0, 0, 900, 500);
+
+ctx.font = "30px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("A picture of a house", canvas.width/2, canvas.height/3);
+
+//ground
+ctx.fillStyle = "green";
+ctx.fillRect(0, 370, 900, 600);
+
+//sun
+ctx.beginPath();
+ctx.arc(400, 50, 40, 0, 2 * Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+ctx.stroke();
+ctx.save();
+
+//house rectangle
+ctx.beginPath();
+ctx.rect(400, 320, 150, 100);
+ctx.fillStyle = "brown";
+ctx.fill();
+ctx.stroke();
+
+//house roof
+ctx.beginPath();
+ctx.rect(400, 270, 150, 50);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+// Window rectangle
+ctx.beginPath();
+ctx.lineWidth = "4";
+ctx.strokeStyle = "white";
+ctx.rect(400, 320, 50, 50);
+ctx.stroke();
+
+// Door rectangle
+ctx.beginPath();
+ctx.rect(480, 340, 50, 80);
+ctx.fillStyle = "red";
+
+ctx.stroke();
+  
+    //cloud
+    ctx.beginPath();
+    ctx.arc(40,65,40,0,2*Math.PI)
+    ctx.fillStyle = "rgb(255,255,255)";
+    ctx.fill();
+    ctx.arc(110,50,50,0,2*Math.PI)
+    ctx.fillStyle = "rgb(255,255,255)";
+    ctx.fill();
+    ctx.arc(170,65,40,0,2*Math.PI)
+    ctx.fillStyle = "rgb(255,255,255)";
+    ctx.fill();
+    ctx.fillStyle = "rgba(255, 255, 255)";
+    ctx.fillRect (45, 35, 120, 70);
+    ctx.fill();
+
+    
+
+ctx.translate(10, 450);
+ctx.strokeStyle = 'Whtie';
+ctx.save(); 
+
+//gate
+for (var i = 0; i < 50; i = i + 1) {
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, 240);
+    ctx.stroke();
+    ctx.translate(20, 0);
+}
+
+ctx.restore(); 
+
+//gate
+for (var j = 0; j < 50; j = j + 1) {
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(920, 0);
+    ctx.stroke();
+    ctx.translate(0, 20);
+}
+
+
+</script>
+
+<a href="main.html">Main Page</a>
+<a href="https://github.com/zafarhassim/assgin1multi/tree/main">GitHub for Assignment 1</a>
+
+
+
+</body>
+</html>
